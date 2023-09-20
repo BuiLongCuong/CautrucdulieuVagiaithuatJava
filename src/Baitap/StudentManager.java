@@ -82,7 +82,7 @@ public class StudentManager {
         }
         return count;
     }
-    public ArrayList<Student> findStudentByName(String name){
+    public ArrayList<Student> indStudentByName(String name){
         ArrayList<Student> searchStudents = new ArrayList<>();
         for (Student students: getListStudent()) {
             if(students.getName().toLowerCase().contains(name.toLowerCase())){

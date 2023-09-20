@@ -42,7 +42,6 @@ public class Main {
                 case 1:
                     System.out.println("Nhập tên:");
                     String name = input.nextLine();
-//                    input.nextLine();
                     System.out.println("Nhập lớp:");
                     String cla = input.nextLine();
                     System.out.println("Nhập tuổi:");
@@ -115,10 +114,10 @@ public class Main {
                 case 5:
                     System.out.println("Nhập tên học sinh bạn muốn tìm:");
                     String searchName = input.nextLine();
-                    if(clazz.findStudentByName(searchName)!=null){
-                        System.out.println(clazz.findStudentByName(searchName));
-                    }else {
+                    if(clazz.findStudentByName(searchName).isEmpty()){
                         System.out.println("Không có học sinh nào!!");
+                    }else {
+                        System.out.println(clazz.findStudentByName(searchName));
                     }
                     break;
                 case 6:
